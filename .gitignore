@@ -6,3 +6,6 @@ coverage
 # executável do programa antigo (não é nosso para redistribuir)
 *.exe
 *.tsbuildinfo
+
+.vercel
+.env*

@@ -4,6 +4,8 @@ Crie, simule e converta **autômatos finitos, autômatos com pilha, máquinas de
 
 É uma versão web e moderna do antigo *Simulador de Autômatos* (Delphi/Windows) usado nas disciplinas de **Compiladores** e **Linguagens Formais**. Tem as mesmas funcionalidades, com cara de ferramenta de diagramação atual, e já vem com os exemplos das aulas.
 
+**▶ Use agora: https://simulador-automatos.vercel.app**
+
 ![Simulação do exemplo NUM_INT / NUM_REAL: a palavra "3.14;" termina no estado q6 (NUM_REAL)](docs/img/simulacao.png)
 
 ---
