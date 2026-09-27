@@ -1,0 +1,8 @@
+node_modules
+dist
+coverage
+*.local
+
+# executável do programa antigo (não é nosso para redistribuir)
+*.exe
+*.tsbuildinfo

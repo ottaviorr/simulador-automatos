@@ -1,0 +1,65 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/inter';
+@import '@fontsource-variable/jetbrains-mono';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, monospace;
+}
+
+/* Cores do diagrama (SVG). A exportação copia os valores calculados. */
+:root {
+  --c-bg: #fafafa;
+  --c-grid: #d4d4d8;
+  --c-state: #ffffff;
+  --c-stroke: #3f3f46;
+  --c-text: #18181b;
+  --c-muted: #a1a1aa;
+  --c-accent: #7c3aed;
+  --c-accent-soft: #ede9fe;
+  --c-chip: #ffffff;
+  --c-accept: #16a34a;
+  --c-reject: #dc2626;
+}
+.dark {
+  --c-bg: #09090b;
+  --c-grid: #27272a;
+  --c-state: #18181b;
+  --c-stroke: #d4d4d8;
+  --c-text: #fafafa;
+  --c-muted: #52525b;
+  --c-accent: #a78bfa;
+  --c-accent-soft: #2e1065;
+  --c-chip: #18181b;
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  @apply bg-zinc-50 font-sans text-zinc-900 antialiased dark:bg-zinc-950 dark:text-zinc-100;
+}
+
+@keyframes pulse-ring {
+  0%, 100% { opacity: 0.9; }
+  50% { opacity: 0.35; }
+}
+.pulse-ring {
+  animation: pulse-ring 1.2s ease-in-out infinite;
+}
+@keyframes dash-flow {
+  to { stroke-dashoffset: -20; }
+}
+.flow {
+  stroke-dasharray: 6 4;
+  animation: dash-flow 0.6s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .pulse-ring, .flow { animation: none; }
+  * { transition-duration: 0ms !important; }
+}

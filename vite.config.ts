@@ -1,0 +1,14 @@
+import { defineConfig } from 'vitest/config';
+import react from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite';
+import { fileURLToPath } from 'node:url';
+
+export default defineConfig({
+  plugins: [react(), tailwindcss()],
+  build: { chunkSizeWarningLimit: 800 },
+  resolve: { alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) } },
+  test: {
+    include: ['src/**/*.test.ts'],
+    coverage: { include: ['src/core/**'], exclude: ['src/core/**/*.test.ts'] },
+  },
+});
