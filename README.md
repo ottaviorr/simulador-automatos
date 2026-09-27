@@ -181,3 +181,9 @@ src/
 
 - Inspirado no *Simulador de Autômatos* original (Delphi), usado nas aulas de Compiladores.
 - Exemplos baseados na **Aula 03 — Expressões Regulares, Autômatos e Lex/Flex**, de Compiladores (Univértix).
+
+---
+
+## Licença
+
+[MIT](LICENSE): pode usar, copiar, modificar e distribuir o código livremente, desde que mantenha o aviso de autoria.
